@@ -1,0 +1,39 @@
+<div class="action__header d-flex justify-content-between">
+  <div class="action__title">
+    <strong class="text-uppercase">
+      Add element
+    </strong>
+  </div>
+  <div class="action__close">
+    <button mat-icon-button class="action__close-btn">
+      <mat-icon class="mat-icon-close">close</mat-icon>
+    </button>
+  </div>
+</div>
+<div class="action__body">
+  <div class="action__body-title">
+    Add element to persona
+  </div>
+  <mat-grid-list
+    cdkDropList
+    id="persona-elements"
+    [cdkDropListConnectedTo]="dropListIds"
+    [cdkDropListData]="fields"
+    class="mt-3"
+    cols="2"
+    gutterSize="16px"
+    rowHeight="112px"
+  >
+    <ng-container *ngFor="let element of elements">
+      <div cdkDrag>
+        <div class="drag-placeholder" *cdkDragPlaceholder></div>
+        <mat-grid-tile>
+          <div class="element element--{{ element.field_type }}">
+            <div class="element__body d-flex flex-grow-1 justify-content-center flex-column">{{ element.body }}</div>
+            <div class="element__title text-uppercase font-weight-bold">{{ element.title }}</div>
+          </div>
+        </mat-grid-tile>
+      </div>
+    </ng-container>
+  </mat-grid-list>
+</div>

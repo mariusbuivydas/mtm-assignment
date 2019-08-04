@@ -1,0 +1,40 @@
+<div [formGroup]="form" class="persona">
+  <div class="persona__header">
+    <div class="persona__avatar d-flex align-items-center justify-content-center">
+      <mat-icon>face</mat-icon>
+    </div>
+    <div class="persona__name">
+      <app-form-field formControlName="name" title="Persona name"></app-form-field>
+    </div>
+    <div class="persona__initials">
+      <app-form-field formControlName="initials" [maxlength]="3" title="Short name"></app-form-field>
+    </div>
+  </div>
+  <div class="persona__body">
+    <div cdkDropListGroup class="d-flex justify-content-between">
+      <ng-container *ngFor="let column of columns">
+        <div
+          cdkDropList
+          (cdkDropListDropped)="onFieldDrop($event)"
+          [id]="column.id.toString()"
+          [cdkDropListData]="fields[column.id]"
+          class="persona__col persona__col--{{ column.width }}"
+        >
+          <ng-container *ngFor="let field of fields[column.id];">
+            <app-persona-field-factory
+              cdkDrag
+              (destroyed)="onFieldDestroy($event)"
+              [form]="field.form"
+              [field]="field.data"
+              [componentFactory]="field.factory"
+              class="persona__field"
+            >
+              <div cdkDragHandle></div>
+              <div class="drag-placeholder" *cdkDragPlaceholder></div>
+            </app-persona-field-factory>
+          </ng-container>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>

@@ -5,6 +5,7 @@ import { RoutingModule } from './routing/routing.module';
 
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
+import { PersonaModule } from '@components/persona/persona.module';
 import { NavbarComponent } from '@components/navbar/navbar.component';
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { NavbarComponent } from '@components/navbar/navbar.component';
   imports: [
     SharedModule,
     BrowserAnimationsModule,
+    PersonaModule,
     BrowserModule,
     RoutingModule,
   ],

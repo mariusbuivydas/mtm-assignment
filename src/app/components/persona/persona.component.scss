@@ -1,0 +1,69 @@
+.persona {
+  width: 664px;
+  margin: 0 auto;
+  padding-top: 44px;
+  border-radius: 2px;
+
+  &__avatar {
+    width: 56px;
+    height: 56px;
+
+    color: #3C4646;
+    border-radius: 2px;
+    background: #F05A50 linear-gradient(180deg, rgba(255,255,255,0.2) 0%, rgba(240,240,240,0) 100%);
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+
+    padding: 16px;
+
+    border-radius: 2px 2px 0 0;
+    background-color: #DCDCDC;
+  }
+
+  &__name {
+    width: 416px;
+  }
+
+  &__initials {
+    width: 128px;
+  }
+
+  &__initials input {
+    text-transform: uppercase;
+  }
+
+  &__body {
+    padding: 8px;
+
+    border-radius: 0 0 2px 2px;
+    background-color: #F0F0F0;
+  }
+
+  &__col {
+    min-height: 300px;
+
+    &--thin {
+      width: 216px;
+    }
+
+    &--wide {
+      width: 432px;
+    }
+  }
+
+  &__field {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+
+    cursor: move;
+    border: 8px solid transparent;
+    font-size: 14px;
+  }
+}
+
+

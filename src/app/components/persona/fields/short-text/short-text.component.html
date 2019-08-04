@@ -1,0 +1,14 @@
+<div [formGroup]="form" class="field__wrapper">
+  <div class="field__header d-flex justify-content-between">
+    <div class="field__drag position-relative flex-grow-1">
+      <ng-content></ng-content>
+      <span class="field__title text-uppercase">{{ field.title }}</span>
+    </div>
+    <button (click)="deleteField()" mat-icon-button class="field__remove">
+      <mat-icon class="mat-icon-remove">delete</mat-icon>
+    </button>
+  </div>
+  <div class="field__body">
+    <input class="w-100" formControlName="data" (blur)="onBlur()" [value]="form.value.data" type="text">
+  </div>
+</div>

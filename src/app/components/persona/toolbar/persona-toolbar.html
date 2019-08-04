@@ -1,0 +1,48 @@
+<mat-toolbar class="toolbar w-100">
+  <mat-toolbar-row class="justify-content-between">
+    <div class="d-inline-flex align-items-center">
+      <mat-icon>person</mat-icon>
+      <span class="toolbar__name">
+        Persona
+        <div
+          #nameInput
+          class="d-inline-block font-weight-bold"
+          contenteditable="true"
+          [textContent]="name"
+          (input)="onInput($event)"
+        >
+          {{ name }}
+        </div>
+      </span>
+      <button (click)="onClick()" mat-icon-button class="toolbar__name-edit">
+        <mat-icon class="mat-icon-edit">edit</mat-icon>
+      </button>
+    </div>
+    <div class="toolbar__actions">
+      <div class="d-none d-md-flex toolbar__action">
+        <mat-icon class="toolbar__action-icon">save</mat-icon>
+        <span class="toolbar__action-text">Save persona</span>
+      </div>
+      <div class="d-none d-md-flex toolbar__action">
+        <mat-icon class="toolbar__action-icon">add_box</mat-icon>
+        <span class="toolbar__action-text">Add element</span>
+      </div>
+      <div class="d-none d-md-flex toolbar__action">
+        <mat-icon class="toolbar__action-icon">file_copy</mat-icon>
+        <span class="toolbar__action-text">Duplicate</span>
+      </div>
+      <div class="d-none d-md-flex toolbar__action">
+        <mat-icon class="toolbar__action-icon">arrow_right_alt</mat-icon>
+        <span class="toolbar__action-text">Move</span>
+      </div>
+      <div class="d-none d-md-flex toolbar__action">
+        <mat-icon class="toolbar__action-icon">help</mat-icon>
+        <span class="toolbar__action-text">Help</span>
+      </div>
+      <div class="toolbar__action">
+        <mat-icon class="toolbar__action-icon">more_horiz</mat-icon>
+        <span class="toolbar__action-text">More actions</span>
+      </div>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>

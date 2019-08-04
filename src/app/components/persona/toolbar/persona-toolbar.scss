@@ -1,0 +1,58 @@
+@import '~src/scss/mixins';
+
+.toolbar {
+  position: fixed;
+  z-index: 5;
+  top: 36px;
+  height: 64px;
+  background: linear-gradient(180deg, #FFFFFF 0%, #F0F0F0 100%);
+
+  &__name {
+    margin: 0 6px 0 10px;
+    color: #3C4646;
+    font-size: 20px;
+    font-weight: 300;
+
+    &-edit {
+      color: #B1B6B6;
+      @include icon-size(14px);
+    }
+  }
+
+  &__actions {
+    display: flex;
+    height: 100%;
+  }
+
+  &__action {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+
+    &-text {
+      padding-top: 5px;
+      color: #646E6E;
+      font-size: 12px;
+      line-height: 12px;
+    }
+  }
+
+  .mat-icon {
+    color: #646E6E;
+    @include icon-size();
+
+    &-edit {
+      @include icon-size(14px);
+    }
+  }
+
+  .mat-toolbar-row {
+    height: 64px;
+  }
+}
