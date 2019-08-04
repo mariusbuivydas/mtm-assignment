@@ -1,0 +1,24 @@
+<header class="header d-block position-relative h-100 w-100">
+  <app-navbar></app-navbar>
+  <app-persona-toolbar></app-persona-toolbar>
+</header>
+<main class="main">
+  <mat-sidenav-container>
+    <mat-sidenav-content>
+      <app-persona></app-persona>
+    </mat-sidenav-content>
+    <mat-sidenav
+      [disableClose]="true"
+      [fixedInViewport]="true"
+      [fixedTopGap]="116"
+      [fixedBottomGap]="0"
+      mode="side"
+      position="end"
+      opened
+    >
+    <app-persona-add-element></app-persona-add-element>
+    </mat-sidenav>
+  </mat-sidenav-container>
+</main>
+
+

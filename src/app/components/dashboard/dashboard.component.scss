@@ -1,0 +1,19 @@
+.main {
+  padding-top: 100px;
+
+  .mat-drawer {
+    width: 390px;
+  }
+
+  .mat-drawer, .mat-drawer-container {
+    border: 0;
+    background-color: transparent;
+  }
+
+  .mat-drawer,
+  .mat-drawer-container,
+  .mat-drawer-content,
+  .mat-drawer-inner-container {
+    overflow: visible;
+  }
+}
