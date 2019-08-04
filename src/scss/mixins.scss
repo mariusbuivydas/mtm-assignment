@@ -1,0 +1,10 @@
+// http://ely-s.github.io/mixin/
+@import "~bootstrap/scss/_mixins";
+
+
+@mixin icon-size($size: 24px) {
+  font-size: $size;
+  height: $size;
+  width: $size;
+  line-height: $size;
+}
