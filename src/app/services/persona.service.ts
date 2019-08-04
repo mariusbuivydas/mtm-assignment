@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { of as observableOf } from 'rxjs';
+import { of } from 'rxjs';
 import { environment } from './../../environments/environment';
 
 import {
@@ -25,7 +25,7 @@ export class PersonaDataService implements PersonaData {
   }
 
   updatePersona(persona: Persona) {
-    return observableOf(persona);
+    return of(persona);
   }
 
   getColumns(id: number = PERSONA_ID) {
@@ -38,14 +38,14 @@ export class PersonaDataService implements PersonaData {
 
   createField(field: Partial<PersonaField>) {
     field.id = ++id_counter;
-    return observableOf(field);
+    return of(field);
   }
 
   updateField(field: PersonaField) {
-    return observableOf(field);
+    return of(field);
   }
 
   deleteField(id: number) {
-    return observableOf({});
+    return of({});
   }
 }

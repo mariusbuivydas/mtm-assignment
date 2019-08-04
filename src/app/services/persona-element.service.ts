@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { of as observableOf } from 'rxjs';
+import { of } from 'rxjs';
 
 import { PersonaElementData, PersonaElement } from '@data/persona-element';
 
@@ -10,6 +10,6 @@ export class PersonaElementDataService implements PersonaElementData {
   ];
 
   getElements() {
-    return observableOf(this.elements);
+    return of(this.elements);
   }
 }
