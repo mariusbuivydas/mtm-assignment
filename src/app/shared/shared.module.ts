@@ -10,7 +10,13 @@ import {
   MatIconModule,
   MatSidenavModule,
 } from '@angular/material';
+
+import { FormFieldComponent } from '@components/form-field/form-field.component';
+
 @NgModule({
+  declarations: [
+    FormFieldComponent,
+  ],
   imports: [
     CommonModule,
     FormsModule,
@@ -32,6 +38,7 @@ import {
     MatButtonModule,
     MatSidenavModule,
     MatGridListModule,
+    FormFieldComponent,
   ]
 })
 export class SharedModule {}

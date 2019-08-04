@@ -1,0 +1,10 @@
+<div class="form-field__wrapper">
+  <div class="form-field__header d-flex justify-content-between">
+    <div class="form-field__drag position-relative flex-grow-1">
+      <span class="form-field__title text-uppercase">{{ title }}</span>
+    </div>
+  </div>
+  <div class="form-field__body">
+    <input type="text" [attr.maxlength]="maxlength" class="w-100" [value]="value" (input)="onInput($event)">
+  </div>
+</div>
