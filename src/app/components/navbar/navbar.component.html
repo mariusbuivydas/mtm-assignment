@@ -1,0 +1,37 @@
+<nav class="nav position-fixed d-flex justify-content-between w-100">
+  <div class="nav__container d-flex">
+    <a class="nav__logo"></a>
+    <div class="nav__btn">
+      <mat-icon>person</mat-icon>
+      <span class="nav__btn-text nav__btn-text--highlight">3</span>
+    </div>
+    <div class="nav__btn">
+      <mat-icon>blur_circular</mat-icon>
+      <span class="nav__btn-text nav__btn-text--highlight">1</span>
+    </div>
+    <div class="nav__btn">
+      <mat-icon>device_hub</mat-icon>
+      <span class="nav__btn-text nav__btn-text--highlight">1</span>
+    </div>
+  </div>
+  <div class="nav__container nav__container--center d-none d-md-block">
+    <ul class="nav__breadcrumb p-0 m-0">
+      <li class="nav__breadcrumb-item">Dashboard</li>
+      <li class="nav__breadcrumb-item">My Project</li>
+      <li class="nav__breadcrumb-item nav__breadcrumb-item--active">Persona {{ name }}</li>
+    </ul>
+  </div>
+  <div class="nav__container justify-content-end">
+    <div class="nav__btn">
+      <mat-icon>domain</mat-icon>
+      <span class="nav__btn-text d-none d-md-block">My organization</span>
+    </div>
+    <div class="nav__btn">
+      <mat-icon>person</mat-icon>
+      <span class="nav__btn-text d-none d-md-block">John Wick</span>
+    </div>
+    <div class="nav__btn">
+      <mat-icon>power_settings_new</mat-icon>
+    </div>
+  </div>
+</nav>

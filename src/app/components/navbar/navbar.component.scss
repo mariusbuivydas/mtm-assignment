@@ -1,0 +1,80 @@
+.nav {
+  height: 36px;
+  padding: 6px 8px;
+  background-color: #3C4646;
+  z-index: 5;
+
+  &__container {
+    height: 24px;
+
+    &--center {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  &__logo {
+    width: 30px;
+    height: 24px;
+    margin-right: 4px;
+    background-image: url('/assets/images/smaply.svg');
+    background-size: auto 24px;
+  }
+
+  &__btn {
+    display: inline-flex;
+    margin-left: 4px;
+    padding: 4px 8px;
+    border-radius: 2px;
+    background-color: #646E6E;
+
+    &-text {
+      margin-left: 4px;
+      color: #fff;
+      font-size: 14px;
+      line-height: 16px;
+
+      &--highlight {
+        padding: 2px 7px;
+        font-size: 12px;
+        line-height: 12px;
+        border-radius: 16px;
+        background-color: #3C4646;
+      }
+    }
+  }
+
+  &__breadcrumb {
+    list-style: none;
+    text-transform: uppercase;
+    color: #B1B6B6;
+    font-family: "Source Sans Pro";
+    font-size: 12px;
+    line-height: 24px;
+
+    &-item {
+      display: inline;
+
+      & + &:before {
+        padding: 0 3px;
+        content: "/";
+        font-weight: normal;
+      }
+    }
+
+    &-item--active {
+      font-weight: bold;
+    }
+  }
+
+  .material-icons {
+    font-size: 16px;
+  }
+
+  .mat-icon {
+    width: 16px;
+    height: 16px;
+    color: #DCDCDC;
+  }
+}
